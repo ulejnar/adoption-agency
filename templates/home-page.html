@@ -2,20 +2,21 @@
 
 {% block title %}Pets{% endblock %}
 {%block body %}
-<div class ="container">
+<div class ="container-fluid">
 {% for pet in pets %}
    <span>
         <div>
-           {{pet.photo_url}}
+          <img src="{{pet.photo_url}}" alt="{{pet.name}}" width="300">
         </div> 
         <div>
+          <h2>
             {{pet.name}} 
-            {% if pet.avaliable %}
+            {% if pet.avaliable == t %}
             is avaliable!
             {% else %}
             is not available :(
             {% endif %}
-            
+          </h1>
         </div>
 </span>
 {% endfor %}
