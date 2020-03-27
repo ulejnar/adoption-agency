@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Pets{% endblock %}
+{%block body %}
+<div class ="container">
+{% for pet in pets %}
+   <span>
+        <div>
+           {{pet.photo_url}}
+        </div> 
+        <div>
+            {{pet.name}} 
+            {% if pet.avaliable %}
+            is avaliable!
+            {% else %}
+            is not available :(
+            {% endif %}
+            
+        </div>
+</span>
+{% endfor %}
+</div>
+{% endblock %}
