@@ -42,6 +42,8 @@ def add_pet_form():
         age = form.age.data
         notes = form.notes.data
 
+        # if age is in this range, young, elif
+
         pet = Pet(name=name, 
                   species=species, 
                   photo_url=photo_url, 
